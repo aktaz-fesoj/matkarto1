@@ -27,6 +27,8 @@ dist_wgs = distance(x1_jtsk, y1_jtsk, x2_jtsk, y2_jtsk)
 
 %Compute distances
 dist_bess = distance(x1_jtsk_bess, y1_jtsk_bess, x2_jtsk_bess, y2_jtsk_bess)
+dist_bess_1 = distance(x1_jtsk_bess, y1_jtsk_bess, x1_jtsk, y1_jtsk)
+dist_bess_2 = distance(x2_jtsk_bess, y2_jtsk_bess, x2_jtsk, y2_jtsk)
 
 %Convert point (u, v) -> (y, x)_jtsk
 [x1_jtsk_spher, y1_jtsk_spher, mr1_spher, c1_spher] = spheretojtsk(phi1_wgs_rad,la1_wgs_rad)
@@ -35,6 +37,8 @@ dist_bess = distance(x1_jtsk_bess, y1_jtsk_bess, x2_jtsk_bess, y2_jtsk_bess)
 
 %Compute distances
 dist_sphere = distance(x1_jtsk_spher, y1_jtsk_spher, x2_jtsk_spher, y2_jtsk_spher)
+dist_sphere_1 = distance(x1_jtsk_spher, y1_jtsk_spher, x1_jtsk, y1_jtsk)
+dist_sphere_2 = distance(x2_jtsk_spher, y2_jtsk_spher, x2_jtsk, y2_jtsk)
 
 function [distance] = distance(x1, y1, x2, y2)
 %calculates euclidian distance
